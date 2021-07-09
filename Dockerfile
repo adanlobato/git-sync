@@ -1,7 +1,7 @@
 FROM bitnami/git
 
-WORKDIR /code
+WORKDIR /git-sync
 
 COPY . .
 
-ENTRYPOINT /code/git-sync.sh
+ENTRYPOINT /git-sync/git-sync.sh
