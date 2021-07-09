@@ -7,7 +7,7 @@ pull() {
 }
   
 clone() {
-    git clone git@github.com:${GIT_SYNC_ORG}/${GIT_SYNC_REPO}.git --recurse-submodules --depth=1 --shallow-submodules ${GIT_SYNC_DEST}
+    git clone git@github.com:${GIT_SYNC_ORG}/${GIT_SYNC_REPO}.git --branch ${GIT_SYNC_BRANCH:-develop} --recurse-submodules --depth=1 --shallow-submodules ${GIT_SYNC_DEST}
 }
 
 while : ; do
