@@ -17,13 +17,13 @@ while : ; do
     pull || clone
    
     if [ $? -eq 0 ]; then
-        printf "✔ ($(date +%X)) ${GIT_SYNC_ORG}/${GIT_SYNC_REPO} Successfully synced\n\n"
+        printf "✔ ($(date +%X)) ${GIT_SYNC_REPO} Successfully synced\n\n"
     else
         printf "✘ ($(date +%X)) Something went wrong...\n\n"
     fi
     
-    if [ ${GIT_SYNC_ONE_TIME} = true ]; then
-      exit 0
+    if [ "${GIT_SYNC_ONE_TIME}" = true ]; then
+        exit 0
     fi
     
     sleep ${GIT_SYNC_INTERVAL}
